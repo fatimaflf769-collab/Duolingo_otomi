@@ -1,0 +1,152 @@
+/* Configuración general */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    background-color: #f3f4f6;
+    display: flex;
+}
+
+/* =========================================
+   1. MENÚ VERTICAL (A UN COSTADO - IZQUIERDA)
+   ========================================= */
+#menu-lateral {
+    width: 260px;
+    height: 100vh;
+    background-color: #ffffff;
+    border-right: 2px solid #e5e7eb;
+    position: fixed;
+    top: 0;
+    left: 0;
+    display: flex;
+    flex-direction: column;
+    z-index: 1002;
+}
+
+.logo-sidebar {
+    padding: 25px 20px;
+    border-bottom: 1px solid #f3f4f6;
+}
+
+.texto-logo {
+    font-size: 18px;
+    font-weight: bold;
+    color: #1f2937;
+}
+
+.container-menu {
+    padding: 20px 10px;
+    overflow-y: auto;
+}
+
+.container-menu ul {
+    list-style: none;
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+}
+
+.container-menu a {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    color: #4b5563;
+    text-decoration: none;
+    padding: 12px 15px;
+    font-size: 14px;
+    font-weight: 600;
+    border-radius: 10px;
+    transition: background 0.2s, color 0.2s;
+}
+
+.container-menu a:hover {
+    background-color: #f3f4f6;
+    color: #111827;
+}
+
+.container-menu a.cerrar-sesion {
+    color: #ef4444;
+    margin-top: 20px;
+}
+
+.container-menu a.cerrar-sesion:hover {
+    background-color: #fee2e2;
+}
+
+/* =========================================
+   2. CONTENEDOR DERECHO Y MENÚ HORIZONTAL (ARRIBA)
+   ========================================= */
+.main-wrapper {
+    margin-left: 260px; /* Deja espacio exacto para el menú vertical del costado */
+    width: calc(100% - 260px);
+    display: flex;
+    flex-direction: column;
+}
+
+.menu-horizontal {
+    position: fixed;
+    top: 0;
+    left: 260px;
+    width: calc(100% - 260px);
+    height: 70px;
+    background-color: #ffffff;
+    border-bottom: 2px solid #e5e7eb;
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    padding: 0 40px;
+    z-index: 1001;
+}
+
+.menu-horizontal ul {
+    list-style: none;
+    display: flex;
+    gap: 20px;
+}
+
+.menu-horizontal a {
+    color: #4b5563;
+    text-decoration: none;
+    font-size: 14px;
+    font-weight: 600;
+    padding: 8px 14px;
+    border-radius: 8px;
+    transition: background 0.2s, color 0.2s;
+}
+
+.menu-horizontal a:hover {
+    background-color: #f3f4f6;
+    color: #2563eb;
+}
+
+/* =========================================
+   3. CONTENIDO PRINCIPAL
+   ========================================= */
+main {
+    margin-top: 90px; /* Espacio para que la barra horizontal superior no lo tape */
+    padding: 30px 40px;
+}
+
+section {
+    background: white;
+    padding: 30px;
+    margin-bottom: 30px;
+    border-radius: 16px;
+    box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.05);
+    scroll-margin-top: 90px; /* Evita que el título quede oculto bajo la barra al hacer clic */
+}
+
+.imagen img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 12px;
+    margin-top: 15px;
+}

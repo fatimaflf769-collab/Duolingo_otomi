@@ -1,0 +1,177 @@
+
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Iniciar sesión</title>
+
+    <!-- Bootstrap 5 -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet">
+
+    <style>
+        .divider:after,
+        .divider:before {
+            content: "";
+            flex: 1;
+            height: 1px;
+            background: #0a0a0a;
+        }
+
+        .h-custom {
+            height: calc(100% - 73px);
+        }
+
+        @media (max-width: 450px) {
+            .h-custom {
+                height: 100%;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+<section class="vh-100">
+
+    <div class="container-fluid h-custom">
+        <div class="row d-flex justify-content-center align-items-center h-100">
+
+            <!-- Imagen -->
+            <div class="col-md-9 col-lg-6 col-xl-5">
+                <img
+                    src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSRlJqZXL_KA6QvI75_U5qiBi38UJEjfEdJUh9Cx0HkdA&s=10"
+                    class="img-fluid"
+                    alt="Imagen de inicio de sesión">
+            </div>
+
+            <!-- Formulario único -->
+            <div class="col-md-8 col-lg-6 col-xl-4 offset-xl-1">
+
+                <form id="loginForm" action="login.php" method="POST">
+
+                    <div class="d-flex flex-row align-items-center justify-content-center justify-content-lg-start">
+
+                        <p class="lead fw-normal mb-0 me-3">
+                            Iniciar sesión con
+                        </p>
+
+                        <button type="button" class="btn btn-primary mx-1">
+                            Facebook
+                        </button>
+
+                        <button type="button" class="btn btn-primary mx-1">
+                            Twitter
+                        </button>
+
+                        <button type="button" class="btn btn-primary mx-1">
+                            LinkedIn
+                        </button>
+
+                    </div>
+
+                    <div class="divider d-flex align-items-center my-4">
+                        <p class="text-center fw-bold mx-3 mb-0">O</p>
+                    </div>
+
+                    <!-- Correo electrónico -->
+                    <div class="form-outline mb-4">
+
+                        <input
+                            type="email"
+                            name="email"
+                            id="email"
+                            class="form-control form-control-lg"
+                            placeholder="Ingresa tu correo electrónico"
+                            required>
+
+                        <label class="form-label" for="email">
+                            Correo electrónico
+                        </label>
+
+                    </div>
+
+                    <!-- Contraseña -->
+                    <div class="form-outline mb-3">
+
+                        <input
+                            type="password"
+                            name="contraseña"
+                            id="password"
+                            class="form-control form-control-lg"
+                            placeholder="Ingresa tu contraseña"
+                            required>
+
+                        <label class="form-label" for="password">
+                            Contraseña
+                        </label>
+
+                    </div>
+
+                    <!-- Recordar y recuperar contraseña -->
+                    <div class="d-flex justify-content-between align-items-center">
+
+                        <div class="form-check mb-0">
+
+                            <input
+                                class="form-check-input me-2"
+                                type="checkbox"
+                                name="recordar"
+                                id="recordar">
+
+                            <label class="form-check-label" for="recordar">
+                                Recuérdame
+                            </label>
+
+                        </div>
+
+                        <a href="#" class="text-body">
+                            ¿Olvidaste tu contraseña?
+                        </a>
+
+                    </div>
+
+                    <!-- Botón de inicio de sesión -->
+                    <div class="text-center text-lg-start mt-4 pt-2">
+
+                        <button
+                            type="submit"
+                            class="btn btn-primary btn-lg"
+                            style="padding-left: 2.5rem; padding-right: 2.5rem;">
+
+                            Iniciar sesión
+
+                        </button>
+
+                        <p class="small fw-bold mt-2 pt-1 mb-0">
+
+                            ¿No tienes cuenta?
+
+                            <a href="registro.php" class="link-danger">
+                                Regístrate
+                            </a>
+
+                        </p>
+
+                    </div>
+
+                </form>
+
+            </div>
+        </div>
+    </div>
+
+    <!-- Pie de página -->
+    <div class="d-flex flex-column flex-md-row text-center text-md-start justify-content-between py-4 px-4 px-xl-5 bg-primary">
+
+        <div class="text-white mb-3 mb-md-0">
+            Copyright © 2026. Todos los derechos reservados.
+        </div>
+
+    </div>
+
+</section>
+
+</body>
+</html>

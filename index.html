@@ -1,0 +1,222 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Huitzizilapan</title>
+    <style>
+        /* =========================================
+           ESTILOS GENERALES
+           ========================================= */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: Arial, sans-serif;
+        }
+
+        html {
+            scroll-behavior: smooth;
+        }
+
+        body {
+            background-color: #f4f4f9;
+        }
+
+        /* =========================================
+           1. MENÚ HORIZONTAL (ARRIBA) -> Secciones
+           ========================================= */
+        .menu-horizontal {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 60px;
+            background-color: #1f2937;
+            color: white;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            padding: 0 25px;
+            z-index: 1000;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+        }
+
+        .menu-horizontal .logo {
+            font-size: 18px;
+            font-weight: bold;
+            color: #10b981;
+        }
+
+        .menu-horizontal ul {
+            list-style: none;
+            display: flex; /* Elementos en fila horizontal */
+            gap: 15px;
+        }
+
+        .menu-horizontal a {
+            color: #e5e7eb;
+            text-decoration: none;
+            font-size: 14px;
+            padding: 8px 12px;
+            border-radius: 5px;
+            transition: background 0.3s;
+        }
+
+        .menu-horizontal a:hover {
+            background-color: #374151;
+            color: white;
+        }
+
+        /* =========================================
+           2. MENÚ VERTICAL (COSTADO IZQUIERDO) -> Plataforma
+           ========================================= */
+        .menu-vertical {
+            position: fixed;
+            top: 60px; /* Empieza exactamente debajo del menú horizontal */
+            left: 0;
+            width: 220px;
+            height: calc(100vh - 60px);
+            background-color: #ffffff;
+            border-right: 2px solid #e5e7eb;
+            padding: 20px 10px;
+            z-index: 999;
+        }
+
+        .menu-vertical h3 {
+            font-size: 13px;
+            color: #6b7280;
+            text-transform: uppercase;
+            margin-bottom: 15px;
+            padding-left: 10px;
+        }
+
+        .menu-vertical ul {
+            list-style: none;
+            display: flex;
+            flex-direction: column; /* Elementos en columna vertical */
+            gap: 8px;
+        }
+
+        .menu-vertical a {
+            display: block;
+            color: #374151;
+            text-decoration: none;
+            font-size: 14px;
+            padding: 12px 15px;
+            border-radius: 8px;
+            font-weight: bold;
+            transition: background 0.3s, color 0.3s;
+        }
+
+        .menu-vertical a:hover {
+            background-color: #e0f2fe;
+            color: #0284c7;
+        }
+
+        /* =========================================
+           3. CONTENIDO PRINCIPAL (CENTRO)
+           ========================================= */
+        main {
+            margin-top: 80px;   /* Deja espacio libre abajo del menú horizontal */
+            margin-left: 240px; /* Deja espacio libre a la derecha del menú vertical */
+            padding: 20px 40px;
+        }
+
+        section {
+            background: white;
+            padding: 25px;
+            margin-bottom: 25px;
+            border-radius: 10px;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.05);
+            scroll-margin-top: 80px; /* Evita que el menú horizontal tape el título al hacer clic */
+        }
+
+        section h2 {
+            color: #1f2937;
+            margin-bottom: 10px;
+        }
+
+        .imagen img {
+            max-width: 100%;
+            height: auto;
+            border-radius: 8px;
+            margin-top: 10px;
+        }
+    </style>
+</head>
+<body>
+
+    <!-- =========================================
+       1. MENÚ HORIZONTAL (ARRIBA)
+       ========================================= -->
+    <header class="menu-horizontal">
+        <div class="logo">Huitzizilapan</div>
+        <nav>
+            <ul>
+                <li><a href="#bienvenido">🏠 Bienvenido</a></li>
+                <li><a href="#lugares">📍 Lugares</a></li>
+                <li><a href="#vestimenta">👘 Vestimenta</a></li>
+                <li><a href="#tradiciones">🏮 Tradiciones</a></li>
+                <li><a href="#gastronomia">🍴 Gastronomía</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <!-- =========================================
+       2. MENÚ VERTICAL (COSTADO IZQUIERDO)
+       ========================================= -->
+    <aside class="menu-vertical">
+        <h3>Navegación</h3>
+        <ul>
+            <li><a href="perfil.html">👤 Perfil</a></li>
+            <li><a href="bocales.html">🔤 Vocales</a></li>
+            <li><a href="colores.html">🎨 Colores</a></li>
+            <li><a href="unidad_animales.html">📖 Lecciones</a></li>
+            <li><a href="juegos.html">🎮 Juegos</a></li>
+            <li><a href="perfil1.html">❌ Eliminar perfil</a></li>
+        </ul>
+    </aside>
+
+    <!-- =========================================
+       3. CONTENIDO DE LA PÁGINA
+       ========================================= -->
+    <main>
+        <section id="bienvenido">
+            <h2>Bienvenido a Huitzizilapan</h2>
+            <p>Conoce la cultura, lengua y tradiciones de nuestra comunidad.</p>
+            <h3>Elaborado por: Tu nombre</h3>
+            <div class="imagen">
+                <img src="imagenes/logo.jpg" alt="Logo">
+            </div>
+        </section>
+
+        <section id="lugares">
+            <h2>Lugares por visitar</h2>
+            <div class="imagen">
+                <img src="imagenes/iglesia.jpg" alt="Iglesia">
+            </div>
+        </section>
+
+        <section id="vestimenta">
+            <h2>Vestimenta</h2>
+            <div class="imagen">
+                <img src="imagenes/mujeres.jpg" alt="Vestimenta">
+            </div>
+        </section>
+
+        <section id="tradiciones">
+            <h2>Tradiciones</h2>
+            <div class="imagen">
+                <img src="imagenes/muertos.jpg" alt="Tradiciones">
+            </div>
+        </section>
+
+        <section id="gastronomia">
+            <h2>Gastronomía</h2>
+            <p>Platillos típicos de nuestra comunidad.</p>
+        </section>
+    </main>
+
+</body>
+</html>
